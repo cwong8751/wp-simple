@@ -1,0 +1,98 @@
+/*!
+Theme Name: Simple
+Theme URI: test
+Author: Carl 
+Author URI: test
+Description: Experimentation in wp themeing 
+Version: 1.0.0
+License: None
+Text Domain: test
+*/
+
+.widget-area {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%; /* Adjust the height as needed */
+    width: 250px; /* Adjust the width as needed */
+    background-color: #f1f1f1;
+    padding: 20px; /* Adjust the padding as needed */
+    padding-top: 50px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Add scrollbar if content overflows */
+    z-index: 1; /* Set a higher z-index to bring the sidebar to the front */
+}
+
+/* Styling for sidebar widgets */
+.widget {
+    margin-bottom: 20px;
+}
+
+.widget-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.widget a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.widget a:hover {
+    color: darkblue;
+}
+
+/* Responsive styles - adjust as needed */
+@media (max-width: 768px) {
+    .widget-area {
+        position: static; /* Switch to normal flow on smaller screens */
+        width: 100%;
+        height: auto;
+        z-index: auto; /* Reset the z-index for normal flow */
+    }
+}
+
+/* Reset default styles for list items */
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Styling for the main navigation */
+.main-navigation {
+    background-color: #fff; /* Background color of the site header */
+}
+
+.main-navigation ul {
+    display: flex; /* Use flexbox to create a horizontal layout */
+    justify-content: space-around; /* Distribute items evenly along the main axis */
+    align-items: center; /* Center items along the cross axis */
+    padding: 10px 0; /* Adjust padding as needed */
+}
+
+.main-navigation li {
+    margin: 0 10px; /* Adjust the spacing between navigation items */
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: blue; /* Text color for navigation links */
+}
+
+/* Additional styles for the site title */
+.site-title {
+    margin: 0;
+}
+
+/* Additional styles for the site header */
+.site-header {
+    position: fixed; 
+    top: 0;
+    right: 0;
+    padding: 20px; /* Adjust padding as needed */
+    background-color: #f1f1f1;
+    z-index: 0; /* Set a lower z-index to keep the navigation behind the sidebar */
+    width: calc(100% - 300px); /* Adjust the width based on the sidebar width */
+    margin-right: 30px;
+}
